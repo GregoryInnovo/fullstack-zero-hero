@@ -1,0 +1,11 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+# Documentación
+
+1. Mantén un README principal actualizado en cada proyecto.
+2. Documenta la API con Swagger (backend) y Storybook (frontend si aplica).
+3. Incluye guías de desarrollo y despliegue.
+4. Define y sigue estándares de código en la documentación.

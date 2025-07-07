@@ -1,0 +1,11 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+# Infraestructura y Código Compartido
+
+1. Usa Docker para entornos de desarrollo y despliegue.
+2. Configura pipelines de CI/CD para pruebas y despliegue automático.
+3. Centraliza tipos, utilidades y constantes en carpetas compartidas.
+4. Mantén la documentación de infraestructura y scripts actualizada.

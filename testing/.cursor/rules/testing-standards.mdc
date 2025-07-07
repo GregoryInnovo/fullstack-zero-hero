@@ -1,0 +1,12 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+# Testing
+
+1. Implementa tests unitarios para lógica de negocio y componentes.
+2. Cubre casos de integración entre módulos y servicios.
+3. Realiza pruebas end-to-end (e2e) para flujos críticos.
+4. Usa herramientas como Jest, Testing Library y Supertest.
+5. Mantén la cobertura de tests por encima del 80%.

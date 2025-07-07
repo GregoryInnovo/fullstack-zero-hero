@@ -1,0 +1,13 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Estándares Frontend Web (React + Vite)
+
+1. Usa React Router para la gestión de rutas.
+2. Gestiona el estado global con Redux o Context API.
+3. Implementa estilos con Tailwind o Styled Components, siguiendo atomic design.
+4. Crea componentes compartidos y desacoplados.
+5. Integra el frontend con la API backend usando Axios o fetch.
+

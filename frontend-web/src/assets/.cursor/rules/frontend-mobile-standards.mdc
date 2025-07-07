@@ -1,0 +1,13 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+# Estándares Frontend Mobile (Expo)
+
+1. Usa React Navigation para la navegación principal.
+2. Gestiona el estado global con Redux o Context API.
+3. Aplica un sistema de temas y estilos consistente.
+4. Implementa componentes reutilizables y desacoplados.
+5. Utiliza Axios para la comunicación con el backend.
+6. Mantén la gestión de assets centralizada.

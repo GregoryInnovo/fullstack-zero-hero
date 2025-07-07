@@ -1,0 +1,13 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+# Estándares Backend (NestJS)
+
+1. Usa la estructura modular recomendada por NestJS.
+2. Implementa autenticación JWT para todas las rutas protegidas.
+3. Documenta los endpoints con Swagger.
+4. Configura variables de entorno para credenciales y secretos.
+5. Utiliza Fastly para CDN y caching de recursos estáticos y APIs públicas.
+6. Aplica manejo global de errores y logging estructurado.
