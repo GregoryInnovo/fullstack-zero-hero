@@ -1,4 +1,5 @@
 version: "3.8"
+#Siempre aca poner las nuevas carpetas para que se puedan usar en el swagger
 
 services:
   postgres:
