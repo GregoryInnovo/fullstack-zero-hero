@@ -8,7 +8,7 @@ import { Repository } from 'typeorm';
 import { User } from './entities/user.entity';
 import { CreateUserDto } from './dto/create-user.dto';
 import * as bcrypt from 'bcrypt';
-
+import { UpdateUserDto } from './dto/update-user.dto';
 @Injectable()
 export class UsersService {
   constructor(
@@ -67,4 +67,18 @@ export class UsersService {
 
     return user;
   }
+  async update(id: number, updateUserDto: UpdateUserDto): Promise<User> {
+    const user = await this.findOne(id);
+    return this.usersRepository.save({
+      ...user,
+      ...updateUserDto,
+    });
+  }
+  // async delete(id: number): Promise<User> {
+  //   const result = await this.usersRepository.delete(id);
+  //   if (result.affected === 0) {
+  //     throw new NotFoundException(`User with ID ${id} not found`);
+  //   }
+  //   return ;
+  // }
 }

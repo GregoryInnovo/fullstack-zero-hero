@@ -10,7 +10,8 @@ import {
 import { RolesService } from './roles.service';
 import { CreateRoleDto } from './dto/create-role.dto';
 import { UpdateRoleDto } from './dto/update-role.dto';
-import { ApiOperation, ApiTags, ApiResponse, ApiParam } from '@nestjs/swagger';
+import { ApiOperation, ApiTags, ApiResponse, ApiBody } from '@nestjs/swagger';
+import { Role } from './entities/role.entity';
 
 @ApiTags('Roles')
 @Controller('roles')
@@ -21,16 +22,24 @@ export class RolesController {
   @ApiOperation({ summary: 'Create a new role' })
   @ApiResponse({ status: 201, description: 'Role created successfully' })
   @ApiResponse({ status: 400, description: 'Bad Request - Invalid data' })
-  @ApiResponse({ status: 401, description: 'Unauthorized' })
   @ApiResponse({ status: 500, description: 'Internal Server Error' })
-  create(@Body() createRoleDto: CreateRoleDto) {
+  @ApiBody({
+    description: 'Business creation data',
+    schema: {
+      example: {
+        name: 'Test',
+        description: 'Posible Test',      
+      },
+    },
+  })
+  create(@Body() createRoleDto: CreateRoleDto): Promise<Role> {
     return this.rolesService.create(createRoleDto);
   }
 
   @Get()
   @ApiOperation({ summary: 'Get all roles' })
   @ApiResponse({ status: 201, description: 'List of all roles' })
-  @ApiResponse({ status: 401, description: 'Unauthorized' })
+  @ApiResponse({ status: 404, description: 'Bad Request' })
   @ApiResponse({ status: 500, description: 'Internal Server Error' })
   findAll() {
     return this.rolesService.findAll();
