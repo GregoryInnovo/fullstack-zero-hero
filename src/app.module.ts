@@ -6,7 +6,7 @@ import { databaseConfig } from './config/database.config';
 import { ConfigModule } from '@nestjs/config';
 import { UsersModule } from './users/users.module';
 import { RolesModule } from './roles/roles.module';
-import { AutenticationModule } from './autentication/autentication.module';
+import { LoginModule } from './login/login.module';
 
 @Module({
   imports: [
@@ -17,7 +17,8 @@ import { AutenticationModule } from './autentication/autentication.module';
     TypeOrmModule.forRoot(databaseConfig),
     UsersModule,
     RolesModule,
-    AutenticationModule,
+    LoginModule,
+    
   ],
   controllers: [AppController],
   providers: [AppService],
